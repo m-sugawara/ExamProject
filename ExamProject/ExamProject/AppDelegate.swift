@@ -15,7 +15,17 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
+        window = UIWindow(frame: UIScreen.main.bounds)
+        if let window = window {
+            let provider = GitHubAPIProvider
+            
+            let topViewController = UIStoryboard.main.top
+            topViewController.viewModel = TopViewModel(provider: provider)
+            
+            window.rootViewController = topViewController
+            window.makeKeyAndVisible()
+            
+        }
         return true
     }
 

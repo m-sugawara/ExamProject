@@ -10,13 +10,17 @@ PODS:
   - RxCocoa (3.0.1):
     - RxSwift (~> 3.0)
   - RxSwift (3.0.1)
+  - SnapKit (3.0.2)
   - SwiftyJSON (3.1.4)
+  - Timepiece (1.2.0)
 
 DEPENDENCIES:
   - Moya/RxSwift (~> 8.0.0)
   - RxCocoa (~> 3.0.0)
   - RxSwift (~> 3.0.0)
+  - SnapKit (~> 3.0.0)
   - SwiftyJSON (~> 3.1.4)
+  - Timepiece (~> 1.2.0)
 
 SPEC CHECKSUMS:
   Alamofire: f28cdffd29de33a7bfa022cbd63ae95a27fae140
@@ -24,8 +28,10 @@ SPEC CHECKSUMS:
   Result: 128640a6347e8d2ae48b142556739a2d13f90ce6
   RxCocoa: 15a52fc590dcc700cb4a690a633b5c5184ce3a78
   RxSwift: af5680055c4ad04480189c52d28385b1029493a6
+  SnapKit: 2e456761aa92d4d4067a7a5594c18769d451a8ad
   SwiftyJSON: c2842d878f95482ffceec5709abc3d05680c0220
+  Timepiece: d07900e985af4911f09146f1175fdbec37944836
 
-PODFILE CHECKSUM: 07f69b1c19fdf82320d3f88896e73ba8b744305a
+PODFILE CHECKSUM: cca43ff1cfcb29516d63f310362ff929860cc60a
 
 COCOAPODS: 1.2.1
