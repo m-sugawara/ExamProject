@@ -14,14 +14,18 @@ import Moya
 class TopViewModel {
     private let provider: RxMoyaProvider<GitHubAPI>
     
-    var triggerRefresh = PublishSubject<Void>()
+    var buttonTaps = PublishSubject<Void>()
     
     let results: Observable<[Repository]>
+    var currentDate: Observable<Int>
+    
+    let disposeBag = DisposeBag()
     
     init(provider: RxMoyaProvider<GitHubAPI>) {
         self.provider = provider
         
-        results = triggerRefresh.startWith(())
+        results = buttonTaps
+            .asObservable()
             .flatMapLatest{
                 provider.request(.trendingRepos)
                 .retry(3)
@@ -36,5 +40,29 @@ class TopViewModel {
                     return []
                 }
             })
+        currentDate = Observable<Int>.create { observer in
+            print("subscribed.")
+            let timer = DispatchSource.makeTimerSource(queue: DispatchQueue.global())
+            timer.scheduleRepeating(deadline: DispatchTime.now() + 1000, interval: 1)
+            
+            let cancel = Disposables.create {
+                print("Disposed.")
+                timer.cancel()
+            }
+            
+            var next = 0
+            timer.setEventHandler {
+                print("next: \(next)")
+                if cancel.isDisposed {
+                    return
+                }
+                observer.on(.next(next))
+                next += 1
+            }
+            timer.resume()
+            
+            return cancel
+        }
+        
     }
 }

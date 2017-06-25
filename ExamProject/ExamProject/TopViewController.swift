@@ -17,6 +17,7 @@ class TopViewController: UIViewController {
     
     private let disposeBag = DisposeBag()
 
+    @IBOutlet weak var clockView: ClockView!
     @IBOutlet weak var button: UIButton!
     
     // MARK: - LifeCycle
@@ -29,9 +30,29 @@ class TopViewController: UIViewController {
     
     // MARK: - Private Functions
     func bindToRx() {
-        button.rx.tap.bindTo(viewModel.triggerRefresh).addDisposableTo(disposeBag)
+        _ = viewModel.results.subscribe(onNext: { (repositories) in
+            print("■■■■■💁<\(repositories.count) repositories found!!■■■■■")
+            for repository in repositories {
+                print("■ \(repository.name)")
+                print("  - \(repository.url)")
+            }
+            print("■■■■■")
+        }, onError: { (error) in
+            print("error occurred.")
+        }, onCompleted: { 
+            
+        }).addDisposableTo(disposeBag)
+        
+        button.rx.tap.bindTo(viewModel.buttonTaps).addDisposableTo(disposeBag)
+        
+        _ = viewModel.currentDate.subscribe(onNext: { next in
+            print("date: \(next)")
+            let now = Date()
+            self.clockView.timeLabel.text = now.toString(format: "HH:mm:ss")
+        })
         
         print("\(self) viewModel binded.")
+        self.clockView.timeLabel.text = "aaa"
     }
 
     // MARK: - Memory Management

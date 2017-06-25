@@ -7,3 +7,28 @@
 //
 
 import Foundation
+import SnapKit
+
+class ClockView: UIView {
+    
+    let timeLabel: UILabel = UILabel()
+    
+    override func awakeFromNib() {
+        super.awakeFromNib()
+        
+        setupViews()
+    }
+    
+    private func setupViews() {
+        timeLabel.textColor = UIColor.white
+        timeLabel.font = UIFont.appleSDGothicNeo(type: .bold, size: 20.0)
+        
+        addSubview(timeLabel)
+        timeLabel.snp.makeConstraints { (make) in
+            make.top.equalToSuperview()
+            make.bottom.equalToSuperview()
+            make.left.equalToSuperview()
+            make.right.equalToSuperview()
+        }
+    }
+}

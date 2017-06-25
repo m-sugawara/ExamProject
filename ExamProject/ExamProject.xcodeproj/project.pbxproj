@@ -19,6 +19,7 @@
 		591D81181EFDF544006836D5 /* Repository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 591D81171EFDF544006836D5 /* Repository.swift */; };
 		591D811A1EFDFBC9006836D5 /* UIStoryboard+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 591D81191EFDFBC9006836D5 /* UIStoryboard+Extensions.swift */; };
 		591D811D1EFE31D1006836D5 /* TimerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 591D811C1EFE31D1006836D5 /* TimerView.swift */; };
+		591D811F1EFE36D4006836D5 /* UIFont+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 591D811E1EFE36D4006836D5 /* UIFont+Extensions.swift */; };
 		5E7F6BC9881904DE285061D8 /* Pods_ExamProject.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 39E66B6C817D2D9FC3130645 /* Pods_ExamProject.framework */; };
 		C3BF8253231DC6FE8331E80B /* Pods_ExamProjectTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B99C7D9F322E2C5C841F334 /* Pods_ExamProjectTests.framework */; };
 /* End PBXBuildFile section */
@@ -53,6 +54,7 @@
 		591D81171EFDF544006836D5 /* Repository.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Repository.swift; sourceTree = "<group>"; };
 		591D81191EFDFBC9006836D5 /* UIStoryboard+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIStoryboard+Extensions.swift"; sourceTree = "<group>"; };
 		591D811C1EFE31D1006836D5 /* TimerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimerView.swift; sourceTree = "<group>"; };
+		591D811E1EFE36D4006836D5 /* UIFont+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIFont+Extensions.swift"; sourceTree = "<group>"; };
 		6B99C7D9F322E2C5C841F334 /* Pods_ExamProjectTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ExamProjectTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		740414275BECAB7122CF9C29 /* Pods-ExamProject.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ExamProject.release.xcconfig"; path = "Pods/Target Support Files/Pods-ExamProject/Pods-ExamProject.release.xcconfig"; sourceTree = "<group>"; };
 		D921CD7BDDBCA7D887472C2D /* Pods-ExamProjectTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ExamProjectTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-ExamProjectTests/Pods-ExamProjectTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -181,6 +183,7 @@
 			isa = PBXGroup;
 			children = (
 				591D81131EFDEF03006836D5 /* Date+Extensions.swift */,
+				591D811E1EFE36D4006836D5 /* UIFont+Extensions.swift */,
 				591D81191EFDFBC9006836D5 /* UIStoryboard+Extensions.swift */,
 			);
 			name = Extensions;
@@ -403,6 +406,7 @@
 				591AEB681EFAC63B0021D367 /* AppDelegate.swift in Sources */,
 				591D81181EFDF544006836D5 /* Repository.swift in Sources */,
 				591D811D1EFE31D1006836D5 /* TimerView.swift in Sources */,
+				591D811F1EFE36D4006836D5 /* UIFont+Extensions.swift in Sources */,
 				591D811A1EFDFBC9006836D5 /* UIStoryboard+Extensions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
