@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12121" systemVersion="16C67" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="Cell" id="gTV-IL-0wX" customClass="RepoCollectionViewCell" customModule="ExamProject" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="80" height="200"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="80" height="200"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="E5T-tV-rQw" userLabel="Background View">
+                        <rect key="frame" x="0.0" y="0.0" width="80" height="200"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FQa-vR-x7Q">
+                                <rect key="frame" x="8" y="12" width="64" height="14"/>
+                                <fontDescription key="fontDescription" name="HiraginoSans-W3" family="Hiragino Sans" pointSize="14"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.46666666666666667" green="0.12156862745098039" blue="0.48627450980392156" alpha="0.20225985738255034" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="FQa-vR-x7Q" firstAttribute="top" secondItem="E5T-tV-rQw" secondAttribute="top" constant="12" id="H1S-hv-pOH"/>
+                            <constraint firstItem="FQa-vR-x7Q" firstAttribute="leading" secondItem="E5T-tV-rQw" secondAttribute="leading" constant="8" id="V7A-tg-yXC"/>
+                            <constraint firstAttribute="trailing" secondItem="FQa-vR-x7Q" secondAttribute="trailing" constant="8" id="vjj-uW-y7Y"/>
+                        </constraints>
+                    </view>
+                </subviews>
+            </view>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="E5T-tV-rQw" secondAttribute="trailing" id="1SG-de-JK0"/>
+                <constraint firstAttribute="bottom" secondItem="E5T-tV-rQw" secondAttribute="bottom" id="8KI-eA-bov"/>
+                <constraint firstItem="E5T-tV-rQw" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="C5z-27-fDh"/>
+                <constraint firstItem="E5T-tV-rQw" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="jFX-vA-kgf"/>
+            </constraints>
+            <connections>
+                <outlet property="nameLabel" destination="FQa-vR-x7Q" id="0Vv-hi-HxL"/>
+            </connections>
+        </collectionViewCell>
+    </objects>
+</document>

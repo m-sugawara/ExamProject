@@ -20,6 +20,11 @@
 		591D811A1EFDFBC9006836D5 /* UIStoryboard+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 591D81191EFDFBC9006836D5 /* UIStoryboard+Extensions.swift */; };
 		591D811D1EFE31D1006836D5 /* TimerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 591D811C1EFE31D1006836D5 /* TimerView.swift */; };
 		591D811F1EFE36D4006836D5 /* UIFont+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 591D811E1EFE36D4006836D5 /* UIFont+Extensions.swift */; };
+		594A8FFE1EFFB6A100F1AB25 /* RepoCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 594A8FFC1EFFB6A100F1AB25 /* RepoCollectionViewCell.swift */; };
+		594A8FFF1EFFB6A100F1AB25 /* RepoCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 594A8FFD1EFFB6A100F1AB25 /* RepoCollectionViewCell.xib */; };
+		594A90011EFFB79500F1AB25 /* UIColor+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 594A90001EFFB79500F1AB25 /* UIColor+Extensions.swift */; };
+		594A90031EFFBBE100F1AB25 /* CustomDebugStringConvertible+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 594A90021EFFBBE100F1AB25 /* CustomDebugStringConvertible+Extensions.swift */; };
+		594A90051EFFBC7E00F1AB25 /* CustomStringConvertible+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 594A90041EFFBC7E00F1AB25 /* CustomStringConvertible+Extensions.swift */; };
 		5E7F6BC9881904DE285061D8 /* Pods_ExamProject.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 39E66B6C817D2D9FC3130645 /* Pods_ExamProject.framework */; };
 		C3BF8253231DC6FE8331E80B /* Pods_ExamProjectTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B99C7D9F322E2C5C841F334 /* Pods_ExamProjectTests.framework */; };
 /* End PBXBuildFile section */
@@ -55,6 +60,11 @@
 		591D81191EFDFBC9006836D5 /* UIStoryboard+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIStoryboard+Extensions.swift"; sourceTree = "<group>"; };
 		591D811C1EFE31D1006836D5 /* TimerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimerView.swift; sourceTree = "<group>"; };
 		591D811E1EFE36D4006836D5 /* UIFont+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIFont+Extensions.swift"; sourceTree = "<group>"; };
+		594A8FFC1EFFB6A100F1AB25 /* RepoCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RepoCollectionViewCell.swift; sourceTree = "<group>"; };
+		594A8FFD1EFFB6A100F1AB25 /* RepoCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RepoCollectionViewCell.xib; sourceTree = "<group>"; };
+		594A90001EFFB79500F1AB25 /* UIColor+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+Extensions.swift"; sourceTree = "<group>"; };
+		594A90021EFFBBE100F1AB25 /* CustomDebugStringConvertible+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CustomDebugStringConvertible+Extensions.swift"; sourceTree = "<group>"; };
+		594A90041EFFBC7E00F1AB25 /* CustomStringConvertible+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CustomStringConvertible+Extensions.swift"; sourceTree = "<group>"; };
 		6B99C7D9F322E2C5C841F334 /* Pods_ExamProjectTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ExamProjectTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		740414275BECAB7122CF9C29 /* Pods-ExamProject.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ExamProject.release.xcconfig"; path = "Pods/Target Support Files/Pods-ExamProject/Pods-ExamProject.release.xcconfig"; sourceTree = "<group>"; };
 		D921CD7BDDBCA7D887472C2D /* Pods-ExamProjectTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ExamProjectTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-ExamProjectTests/Pods-ExamProjectTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -183,6 +193,9 @@
 			isa = PBXGroup;
 			children = (
 				591D81131EFDEF03006836D5 /* Date+Extensions.swift */,
+				594A90021EFFBBE100F1AB25 /* CustomDebugStringConvertible+Extensions.swift */,
+				594A90041EFFBC7E00F1AB25 /* CustomStringConvertible+Extensions.swift */,
+				594A90001EFFB79500F1AB25 /* UIColor+Extensions.swift */,
 				591D811E1EFE36D4006836D5 /* UIFont+Extensions.swift */,
 				591D81191EFDFBC9006836D5 /* UIStoryboard+Extensions.swift */,
 			);
@@ -193,6 +206,8 @@
 			isa = PBXGroup;
 			children = (
 				591D811C1EFE31D1006836D5 /* TimerView.swift */,
+				594A8FFC1EFFB6A100F1AB25 /* RepoCollectionViewCell.swift */,
+				594A8FFD1EFFB6A100F1AB25 /* RepoCollectionViewCell.xib */,
 			);
 			name = CustomViews;
 			sourceTree = "<group>";
@@ -286,6 +301,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				594A8FFF1EFFB6A100F1AB25 /* RepoCollectionViewCell.xib in Resources */,
 				591AEB721EFAC63B0021D367 /* LaunchScreen.storyboard in Resources */,
 				591AEB6F1EFAC63B0021D367 /* Assets.xcassets in Resources */,
 				591AEB6D1EFAC63B0021D367 /* Main.storyboard in Resources */,
@@ -403,10 +419,14 @@
 				591AEB6A1EFAC63B0021D367 /* TopViewController.swift in Sources */,
 				591D81161EFDF34B006836D5 /* TopViewModel.swift in Sources */,
 				591D81111EFDEC8C006836D5 /* GitHubAPI.swift in Sources */,
+				594A90031EFFBBE100F1AB25 /* CustomDebugStringConvertible+Extensions.swift in Sources */,
 				591AEB681EFAC63B0021D367 /* AppDelegate.swift in Sources */,
 				591D81181EFDF544006836D5 /* Repository.swift in Sources */,
+				594A8FFE1EFFB6A100F1AB25 /* RepoCollectionViewCell.swift in Sources */,
 				591D811D1EFE31D1006836D5 /* TimerView.swift in Sources */,
+				594A90011EFFB79500F1AB25 /* UIColor+Extensions.swift in Sources */,
 				591D811F1EFE36D4006836D5 /* UIFont+Extensions.swift in Sources */,
+				594A90051EFFBC7E00F1AB25 /* CustomStringConvertible+Extensions.swift in Sources */,
 				591D811A1EFDFBC9006836D5 /* UIStoryboard+Extensions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
