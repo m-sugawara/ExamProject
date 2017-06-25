@@ -1,7 +1,11 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11134" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="01J-lp-oVM">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16C67" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="01J-lp-oVM">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11106"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -16,7 +20,39 @@
                     <view key="view" contentMode="scaleToFill" id="Ze5-6b-2t3">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Background" translatesAutoresizingMaskIntoConstraints="NO" id="otV-AV-S0r" userLabel="Background Image View">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            </imageView>
+                            <visualEffectView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="t6V-ZC-VIP">
+                                <rect key="frame" x="77.5" y="261" width="220" height="45"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="kpy-cZ-KhO">
+                                    <rect key="frame" x="0.0" y="0.0" width="220" height="45"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                </view>
+                                <blurEffect style="light"/>
+                            </visualEffectView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalCompressionResistancePriority="1000" verticalCompressionResistancePriority="1000" image="Logo1" translatesAutoresizingMaskIntoConstraints="NO" id="z0y-PJ-Qm7" userLabel="Logo Image View">
+                                <rect key="frame" x="77.5" y="261" width="220" height="45"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="220" id="W3w-KN-KvY"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="45" id="i5g-m6-9la"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="z0y-PJ-Qm7" firstAttribute="leading" secondItem="t6V-ZC-VIP" secondAttribute="leading" id="6Lm-v8-19d"/>
+                            <constraint firstItem="t6V-ZC-VIP" firstAttribute="trailing" secondItem="z0y-PJ-Qm7" secondAttribute="trailing" id="Br8-2a-qOU"/>
+                            <constraint firstItem="t6V-ZC-VIP" firstAttribute="bottom" secondItem="z0y-PJ-Qm7" secondAttribute="bottom" id="L26-JR-0ZH"/>
+                            <constraint firstItem="otV-AV-S0r" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leading" id="ODv-Wr-SEF"/>
+                            <constraint firstAttribute="bottom" secondItem="otV-AV-S0r" secondAttribute="bottom" id="Xhy-W7-dkD"/>
+                            <constraint firstItem="z0y-PJ-Qm7" firstAttribute="top" secondItem="t6V-ZC-VIP" secondAttribute="top" id="cUf-nJ-SCe"/>
+                            <constraint firstItem="z0y-PJ-Qm7" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" constant="-50" id="gW2-ow-DhB"/>
+                            <constraint firstItem="otV-AV-S0r" firstAttribute="top" secondItem="Ze5-6b-2t3" secondAttribute="top" id="o0s-nd-Y0S"/>
+                            <constraint firstItem="z0y-PJ-Qm7" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="tfy-Is-pe0"/>
+                            <constraint firstAttribute="trailing" secondItem="otV-AV-S0r" secondAttribute="trailing" id="w1r-0p-Izl"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iYj-Kq-Ea1" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -24,4 +60,8 @@
             <point key="canvasLocation" x="53" y="375"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="Background" width="375" height="667"/>
+        <image name="Logo1" width="168" height="31"/>
+    </resources>
 </document>

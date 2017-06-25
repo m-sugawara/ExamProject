@@ -17,7 +17,7 @@ class TopViewModel {
     var buttonTaps = PublishSubject<Void>()
     
     let results: Observable<[Repository]>
-    var currentDate: Observable<Int>
+    var simpleTimer: Observable<Int>
     
     let disposeBag = DisposeBag()
     
@@ -40,29 +40,8 @@ class TopViewModel {
                     return []
                 }
             })
-        currentDate = Observable<Int>.create { observer in
-            print("subscribed.")
-            let timer = DispatchSource.makeTimerSource(queue: DispatchQueue.global())
-            timer.scheduleRepeating(deadline: DispatchTime.now() + 1000, interval: 1)
-            
-            let cancel = Disposables.create {
-                print("Disposed.")
-                timer.cancel()
-            }
-            
-            var next = 0
-            timer.setEventHandler {
-                print("next: \(next)")
-                if cancel.isDisposed {
-                    return
-                }
-                observer.on(.next(next))
-                next += 1
-            }
-            timer.resume()
-            
-            return cancel
-        }
+        
+        simpleTimer = Observable<Int>.interval(1.0, scheduler: MainScheduler.instance)
         
     }
 }

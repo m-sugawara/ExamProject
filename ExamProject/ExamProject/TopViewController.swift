@@ -20,6 +20,8 @@ class TopViewController: UIViewController {
     @IBOutlet weak var clockView: ClockView!
     @IBOutlet weak var button: UIButton!
     
+    private var observer: Any?
+    
     // MARK: - LifeCycle
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -45,14 +47,13 @@ class TopViewController: UIViewController {
         
         button.rx.tap.bindTo(viewModel.buttonTaps).addDisposableTo(disposeBag)
         
-        _ = viewModel.currentDate.subscribe(onNext: { next in
-            print("date: \(next)")
+        // 一秒ごとにカウントするタイマーを取得して現在日時を表示
+        observer = viewModel.simpleTimer.subscribe(onNext: { next in
             let now = Date()
             self.clockView.timeLabel.text = now.toString(format: "HH:mm:ss")
-        })
+        }).addDisposableTo(disposeBag)
         
         print("\(self) viewModel binded.")
-        self.clockView.timeLabel.text = "aaa"
     }
 
     // MARK: - Memory Management
@@ -61,6 +62,8 @@ class TopViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
 
-
+    override var preferredStatusBarStyle: UIStatusBarStyle {
+        return .lightContent
+    }
 }
 

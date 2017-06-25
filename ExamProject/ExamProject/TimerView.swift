@@ -21,7 +21,8 @@ class ClockView: UIView {
     
     private func setupViews() {
         timeLabel.textColor = UIColor.white
-        timeLabel.font = UIFont.appleSDGothicNeo(type: .bold, size: 20.0)
+        timeLabel.font = UIFont.appleSDGothicNeo(type: .bold, size: 28.0)
+        timeLabel.textAlignment = .center
         
         addSubview(timeLabel)
         timeLabel.snp.makeConstraints { (make) in
@@ -29,6 +30,7 @@ class ClockView: UIView {
             make.bottom.equalToSuperview()
             make.left.equalToSuperview()
             make.right.equalToSuperview()
+            make.width.equalToSuperview()
         }
     }
 }

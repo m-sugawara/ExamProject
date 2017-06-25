@@ -24,6 +24,17 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XEW-SE-Vcv" userLabel="BackgroundView">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                 <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Background" translatesAutoresizingMaskIntoConstraints="NO" id="o5i-J8-Ei3">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                    </imageView>
+                                    <visualEffectView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="J5R-Gq-RRA">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="Hsv-CK-43i">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                        </view>
+                                        <blurEffect style="light"/>
+                                    </visualEffectView>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eb6-P5-M5h">
                                         <rect key="frame" x="164" y="587" width="46" height="30"/>
                                         <state key="normal" title="Button"/>
@@ -37,12 +48,19 @@
                                         </constraints>
                                     </view>
                                 </subviews>
-                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.75427328020134232" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="bottom" secondItem="eb6-P5-M5h" secondAttribute="bottom" constant="50" id="14N-eh-m3r"/>
+                                    <constraint firstItem="o5i-J8-Ei3" firstAttribute="leading" secondItem="XEW-SE-Vcv" secondAttribute="leading" id="EN3-M7-Cx5"/>
+                                    <constraint firstAttribute="trailing" secondItem="o5i-J8-Ei3" secondAttribute="trailing" id="G4h-sv-NbY"/>
                                     <constraint firstItem="znS-cP-Byb" firstAttribute="top" secondItem="XEW-SE-Vcv" secondAttribute="top" constant="64" id="IH7-RF-HE5"/>
+                                    <constraint firstItem="J5R-Gq-RRA" firstAttribute="bottom" secondItem="o5i-J8-Ei3" secondAttribute="bottom" id="VCG-iF-0tf"/>
                                     <constraint firstItem="eb6-P5-M5h" firstAttribute="centerX" secondItem="XEW-SE-Vcv" secondAttribute="centerX" id="ayG-38-Bvw"/>
+                                    <constraint firstItem="J5R-Gq-RRA" firstAttribute="leading" secondItem="o5i-J8-Ei3" secondAttribute="leading" id="dqY-gJ-3bs"/>
+                                    <constraint firstItem="J5R-Gq-RRA" firstAttribute="top" secondItem="o5i-J8-Ei3" secondAttribute="top" id="eIW-DP-qMd"/>
+                                    <constraint firstItem="J5R-Gq-RRA" firstAttribute="trailing" secondItem="o5i-J8-Ei3" secondAttribute="trailing" id="eQK-Pn-eR0"/>
                                     <constraint firstItem="znS-cP-Byb" firstAttribute="centerX" secondItem="XEW-SE-Vcv" secondAttribute="centerX" id="gxL-UT-75l"/>
+                                    <constraint firstAttribute="bottom" secondItem="o5i-J8-Ei3" secondAttribute="bottom" id="hMV-Bm-B2g"/>
+                                    <constraint firstItem="o5i-J8-Ei3" firstAttribute="top" secondItem="XEW-SE-Vcv" secondAttribute="top" id="jue-Kc-eSF"/>
                                 </constraints>
                             </view>
                         </subviews>
@@ -54,6 +72,7 @@
                             <constraint firstAttribute="bottom" secondItem="XEW-SE-Vcv" secondAttribute="bottom" id="xSj-Ya-TO4"/>
                         </constraints>
                     </view>
+                    <simulatedStatusBarMetrics key="simulatedStatusBarMetrics" statusBarStyle="lightContent"/>
                     <connections>
                         <outlet property="button" destination="eb6-P5-M5h" id="zyr-IJ-aCa"/>
                         <outlet property="clockView" destination="znS-cP-Byb" id="whM-Yh-zBA"/>
@@ -63,4 +82,7 @@
             </objects>
         </scene>
     </scenes>
+    <resources>
+        <image name="Background" width="375" height="667"/>
+    </resources>
 </document>
