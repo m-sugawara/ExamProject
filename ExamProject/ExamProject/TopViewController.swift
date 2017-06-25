@@ -115,6 +115,8 @@ class TopViewController: UIViewController {
             print("cellForItemAt: \(repositories[indexPath.row].name)")
             let repo = repositories[indexPath.row]
             cell.nameLabel.text = repo.name
+            cell.descriptionLabel.text = repo.description
+            cell.urlLabel.text = repo.htmlUrl
             
             return cell
         }
@@ -122,13 +124,18 @@ class TopViewController: UIViewController {
         // MARK: - UICollectionViewDelegate
         func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
             print("\(indexPath.row) tapped.")
+            let repo = repositories[indexPath.row]
+            if let url = URL(string: repo.htmlUrl) {
+                UIApplication.shared.open(url, options: [:], completionHandler: nil)
+            }
         }
         
         // MARK: - UICollectionViewDelegateFlowLayout
         func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+            let itemsInColumn: CGFloat = 2
             let parent = collectionView.bounds.size
             let cellWidth = parent.width/3
-            let cellHeight = (parent.height - 10 * 4) / 3
+            let cellHeight = (parent.height - 10 * (itemsInColumn + 1)) / itemsInColumn
             print("cellWidth: \(cellWidth), cellHeight: \(cellHeight)")
             return CGSize(width: cellWidth, height: cellHeight)
         }

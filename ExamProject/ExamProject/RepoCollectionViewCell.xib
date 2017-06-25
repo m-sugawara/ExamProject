@@ -12,26 +12,54 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="Cell" id="gTV-IL-0wX" customClass="RepoCollectionViewCell" customModule="ExamProject" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="80" height="200"/>
+            <rect key="frame" x="0.0" y="0.0" width="169" height="200"/>
             <autoresizingMask key="autoresizingMask"/>
             <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                <rect key="frame" x="0.0" y="0.0" width="80" height="200"/>
+                <rect key="frame" x="0.0" y="0.0" width="169" height="200"/>
                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 <subviews>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="E5T-tV-rQw" userLabel="Background View">
-                        <rect key="frame" x="0.0" y="0.0" width="80" height="200"/>
+                        <rect key="frame" x="0.0" y="0.0" width="169" height="200"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FQa-vR-x7Q">
-                                <rect key="frame" x="8" y="12" width="64" height="14"/>
-                                <fontDescription key="fontDescription" name="HiraginoSans-W3" family="Hiragino Sans" pointSize="14"/>
-                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="1000" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FQa-vR-x7Q">
+                                <rect key="frame" x="8" y="12" width="153" height="14"/>
+                                <fontDescription key="fontDescription" name="HiraginoSans-W6" family="Hiragino Sans" pointSize="14"/>
+                                <color key="textColor" red="0.46666666670000001" green="0.1215686275" blue="0.52549019610000003" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="PZT-xb-5kv" userLabel="Icon Image View">
+                                <rect key="frame" x="113" y="8" width="48" height="48"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="48" id="3Lz-ED-V6H"/>
+                                    <constraint firstAttribute="height" constant="48" id="4Kx-kY-y5B"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="1000" text="Label" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zly-kD-cfs" userLabel="Description Label">
+                                <rect key="frame" x="8" y="64" width="153" height="12"/>
+                                <fontDescription key="fontDescription" name="HiraginoSans-W3" family="Hiragino Sans" pointSize="12"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="1000" text="https://www.amazon.com/aaaaaaaaaaaaaaaaaaa" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="o0v-jv-a9d" userLabel="URL Label">
+                                <rect key="frame" x="8" y="170" width="153" height="22"/>
+                                <fontDescription key="fontDescription" name="AppleSDGothicNeo-Thin" family="Apple SD Gothic Neo" pointSize="9"/>
+                                <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
                         <color key="backgroundColor" red="0.84705882352941175" green="0.70588235294117641" blue="0.88627450980392153" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
+                            <constraint firstAttribute="bottom" secondItem="o0v-jv-a9d" secondAttribute="bottom" constant="8" id="4Ko-sr-SE8"/>
+                            <constraint firstItem="zly-kD-cfs" firstAttribute="leading" secondItem="FQa-vR-x7Q" secondAttribute="leading" id="BRI-Jm-51f"/>
+                            <constraint firstItem="o0v-jv-a9d" firstAttribute="leading" secondItem="zly-kD-cfs" secondAttribute="leading" id="DTi-0m-xCq"/>
                             <constraint firstItem="FQa-vR-x7Q" firstAttribute="top" secondItem="E5T-tV-rQw" secondAttribute="top" constant="12" id="H1S-hv-pOH"/>
+                            <constraint firstItem="zly-kD-cfs" firstAttribute="top" secondItem="PZT-xb-5kv" secondAttribute="bottom" constant="8" id="HyL-7d-ATG"/>
                             <constraint firstItem="FQa-vR-x7Q" firstAttribute="leading" secondItem="E5T-tV-rQw" secondAttribute="leading" constant="8" id="V7A-tg-yXC"/>
+                            <constraint firstItem="o0v-jv-a9d" firstAttribute="top" relation="greaterThanOrEqual" secondItem="zly-kD-cfs" secondAttribute="bottom" constant="8" id="YGx-rF-Ojh"/>
+                            <constraint firstAttribute="trailing" secondItem="zly-kD-cfs" secondAttribute="trailing" constant="8" id="baB-ms-CVL"/>
+                            <constraint firstItem="PZT-xb-5kv" firstAttribute="top" secondItem="E5T-tV-rQw" secondAttribute="top" constant="8" id="cJt-LS-LCm"/>
+                            <constraint firstAttribute="trailing" secondItem="o0v-jv-a9d" secondAttribute="trailing" constant="8" id="ilo-Kl-5Nx"/>
+                            <constraint firstAttribute="trailing" secondItem="PZT-xb-5kv" secondAttribute="trailing" constant="8" id="qBf-Xt-WOR"/>
                             <constraint firstAttribute="trailing" secondItem="FQa-vR-x7Q" secondAttribute="trailing" constant="8" id="vjj-uW-y7Y"/>
                         </constraints>
                     </view>
@@ -43,6 +71,7 @@
                 <constraint firstItem="E5T-tV-rQw" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="C5z-27-fDh"/>
                 <constraint firstItem="E5T-tV-rQw" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="jFX-vA-kgf"/>
             </constraints>
+            <size key="customSize" width="169" height="200"/>
             <userDefinedRuntimeAttributes>
                 <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
                 <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
@@ -50,8 +79,12 @@
                 </userDefinedRuntimeAttribute>
             </userDefinedRuntimeAttributes>
             <connections>
+                <outlet property="descriptionLabel" destination="zly-kD-cfs" id="viw-gs-omu"/>
+                <outlet property="iconImageView" destination="PZT-xb-5kv" id="1QU-a4-eJ5"/>
                 <outlet property="nameLabel" destination="FQa-vR-x7Q" id="0Vv-hi-HxL"/>
+                <outlet property="urlLabel" destination="o0v-jv-a9d" id="DGJ-ek-Wo0"/>
             </connections>
+            <point key="canvasLocation" x="110.5" y="113"/>
         </collectionViewCell>
     </objects>
 </document>
