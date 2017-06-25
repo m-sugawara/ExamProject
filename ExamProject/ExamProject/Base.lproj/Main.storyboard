@@ -35,10 +35,6 @@
                                         </view>
                                         <blurEffect style="light"/>
                                     </visualEffectView>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eb6-P5-M5h">
-                                        <rect key="frame" x="164" y="587" width="46" height="30"/>
-                                        <state key="normal" title="Button"/>
-                                    </button>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="znS-cP-Byb" customClass="ClockView" customModule="ExamProject" customModuleProvider="target">
                                         <rect key="frame" x="67" y="64" width="240" height="80"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
@@ -47,20 +43,61 @@
                                             <constraint firstAttribute="width" constant="240" id="aFQ-D1-dnM"/>
                                         </constraints>
                                     </view>
+                                    <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="eM6-RM-VSK">
+                                        <rect key="frame" x="16" y="184" width="343" height="467"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.40000000000000002" colorSpace="calibratedWhite"/>
+                                        <inset key="scrollIndicatorInsets" minX="10" minY="10" maxX="10" maxY="10"/>
+                                        <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="lSd-u4-b1v">
+                                            <size key="itemSize" width="140" height="280"/>
+                                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                            <inset key="sectionInset" minX="10" minY="10" maxX="10" maxY="10"/>
+                                        </collectionViewFlowLayout>
+                                        <cells/>
+                                    </collectionView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eb6-P5-M5h" userLabel="Refresh Button">
+                                        <rect key="frame" x="165" y="591" width="44" height="44"/>
+                                        <color key="backgroundColor" red="0.46666666670000001" green="0.1215686275" blue="0.52549019610000003" alpha="1" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="44" id="8rS-Bm-RqL"/>
+                                            <constraint firstAttribute="height" constant="44" id="mdK-Ve-YhM"/>
+                                        </constraints>
+                                        <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <state key="normal" image="Icon_Refresh"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                <integer key="value" value="22"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="NO"/>
+                                            <userDefinedRuntimeAttribute type="size" keyPath="layer.shadowOffset">
+                                                <size key="value" width="0.0" height="0.0"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.shadowOpacity">
+                                                <real key="value" value="0.5"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.shadowRadius">
+                                                <integer key="value" value="3"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </button>
                                 </subviews>
                                 <constraints>
-                                    <constraint firstAttribute="bottom" secondItem="eb6-P5-M5h" secondAttribute="bottom" constant="50" id="14N-eh-m3r"/>
+                                    <constraint firstItem="eM6-RM-VSK" firstAttribute="leading" secondItem="XEW-SE-Vcv" secondAttribute="leading" constant="16" id="8eh-lZ-1Th"/>
+                                    <constraint firstAttribute="trailing" secondItem="eM6-RM-VSK" secondAttribute="trailing" constant="16" id="A8x-4x-xgh"/>
                                     <constraint firstItem="o5i-J8-Ei3" firstAttribute="leading" secondItem="XEW-SE-Vcv" secondAttribute="leading" id="EN3-M7-Cx5"/>
                                     <constraint firstAttribute="trailing" secondItem="o5i-J8-Ei3" secondAttribute="trailing" id="G4h-sv-NbY"/>
                                     <constraint firstItem="znS-cP-Byb" firstAttribute="top" secondItem="XEW-SE-Vcv" secondAttribute="top" constant="64" id="IH7-RF-HE5"/>
+                                    <constraint firstAttribute="bottom" secondItem="eb6-P5-M5h" secondAttribute="bottom" constant="32" id="Llj-K1-eyo"/>
+                                    <constraint firstAttribute="bottom" secondItem="eM6-RM-VSK" secondAttribute="bottom" constant="16" id="UA5-8v-NYG"/>
                                     <constraint firstItem="J5R-Gq-RRA" firstAttribute="bottom" secondItem="o5i-J8-Ei3" secondAttribute="bottom" id="VCG-iF-0tf"/>
-                                    <constraint firstItem="eb6-P5-M5h" firstAttribute="centerX" secondItem="XEW-SE-Vcv" secondAttribute="centerX" id="ayG-38-Bvw"/>
                                     <constraint firstItem="J5R-Gq-RRA" firstAttribute="leading" secondItem="o5i-J8-Ei3" secondAttribute="leading" id="dqY-gJ-3bs"/>
                                     <constraint firstItem="J5R-Gq-RRA" firstAttribute="top" secondItem="o5i-J8-Ei3" secondAttribute="top" id="eIW-DP-qMd"/>
                                     <constraint firstItem="J5R-Gq-RRA" firstAttribute="trailing" secondItem="o5i-J8-Ei3" secondAttribute="trailing" id="eQK-Pn-eR0"/>
                                     <constraint firstItem="znS-cP-Byb" firstAttribute="centerX" secondItem="XEW-SE-Vcv" secondAttribute="centerX" id="gxL-UT-75l"/>
                                     <constraint firstAttribute="bottom" secondItem="o5i-J8-Ei3" secondAttribute="bottom" id="hMV-Bm-B2g"/>
                                     <constraint firstItem="o5i-J8-Ei3" firstAttribute="top" secondItem="XEW-SE-Vcv" secondAttribute="top" id="jue-Kc-eSF"/>
+                                    <constraint firstItem="eM6-RM-VSK" firstAttribute="top" secondItem="znS-cP-Byb" secondAttribute="bottom" constant="40" id="qcf-zv-AFP"/>
+                                    <constraint firstItem="eb6-P5-M5h" firstAttribute="centerX" secondItem="XEW-SE-Vcv" secondAttribute="centerX" id="xdZ-yp-9PE"/>
                                 </constraints>
                             </view>
                         </subviews>
@@ -74,8 +111,9 @@
                     </view>
                     <simulatedStatusBarMetrics key="simulatedStatusBarMetrics" statusBarStyle="lightContent"/>
                     <connections>
-                        <outlet property="button" destination="eb6-P5-M5h" id="zyr-IJ-aCa"/>
                         <outlet property="clockView" destination="znS-cP-Byb" id="whM-Yh-zBA"/>
+                        <outlet property="collectionView" destination="eM6-RM-VSK" id="oG1-uv-yK6"/>
+                        <outlet property="refreshButton" destination="eb6-P5-M5h" id="5Df-Qr-aia"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -84,5 +122,6 @@
     </scenes>
     <resources>
         <image name="Background" width="375" height="667"/>
+        <image name="Icon_Refresh" width="64" height="64"/>
     </resources>
 </document>

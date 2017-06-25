@@ -18,11 +18,15 @@ struct Repository {
     let isPrivate: Bool
     let isForked: Bool
     let url: String
+    let htmlUrl: String
+    let owner: User
 }
 
 extension Repository {
     static func fromJSON(_ json: AnyObject) -> Repository {
         let json = JSON(json)
+        
+        
         
         return Repository(id: json["id"].intValue,
                           name: json["name"].stringValue,
@@ -30,7 +34,9 @@ extension Repository {
                           description: json["description"].stringValue,
                           isPrivate: json["private"].boolValue,
                           isForked: json["fork"].boolValue,
-                          url: json["url"].stringValue)
+                          url: json["url"].stringValue,
+                          htmlUrl: json["html_url"].stringValue,
+                          owner: User.fromDict(json["owner"].dictionaryValue))
     }
     
     static func fromJSONArray(_ json: [AnyObject]) -> [Repository] {
