@@ -1,5 +1,6 @@
 PODS:
   - Alamofire (4.5.0)
+  - Kingfisher (3.10.2)
   - Moya/Core (8.0.5):
     - Alamofire (~> 4.1)
     - Result (~> 3.0)
@@ -15,6 +16,7 @@ PODS:
   - Timepiece (1.2.0)
 
 DEPENDENCIES:
+  - Kingfisher (~> 3.10.0)
   - Moya/RxSwift (~> 8.0.0)
   - RxCocoa (~> 3.0.0)
   - RxSwift (~> 3.0.0)
@@ -24,6 +26,7 @@ DEPENDENCIES:
 
 SPEC CHECKSUMS:
   Alamofire: f28cdffd29de33a7bfa022cbd63ae95a27fae140
+  Kingfisher: 7297492bf8cec9b2e2dee3519f2219948580d98e
   Moya: c37eec09a098ba9991b5a963b291fc5704bdb9ef
   Result: 128640a6347e8d2ae48b142556739a2d13f90ce6
   RxCocoa: 15a52fc590dcc700cb4a690a633b5c5184ce3a78
@@ -32,6 +35,6 @@ SPEC CHECKSUMS:
   SwiftyJSON: c2842d878f95482ffceec5709abc3d05680c0220
   Timepiece: d07900e985af4911f09146f1175fdbec37944836
 
-PODFILE CHECKSUM: cca43ff1cfcb29516d63f310362ff929860cc60a
+PODFILE CHECKSUM: 47e63d873d047d1582061bd19e7f100e7bcf4fca
 
 COCOAPODS: 1.2.1

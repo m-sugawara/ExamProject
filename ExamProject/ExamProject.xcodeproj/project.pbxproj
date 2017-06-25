@@ -26,6 +26,7 @@
 		594A90031EFFBBE100F1AB25 /* CustomDebugStringConvertible+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 594A90021EFFBBE100F1AB25 /* CustomDebugStringConvertible+Extensions.swift */; };
 		594A90051EFFBC7E00F1AB25 /* CustomStringConvertible+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 594A90041EFFBC7E00F1AB25 /* CustomStringConvertible+Extensions.swift */; };
 		594A90071EFFF00D00F1AB25 /* UIView+Animations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 594A90061EFFF00D00F1AB25 /* UIView+Animations.swift */; };
+		594A90091F000A3700F1AB25 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 594A90081F000A3700F1AB25 /* User.swift */; };
 		5E7F6BC9881904DE285061D8 /* Pods_ExamProject.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 39E66B6C817D2D9FC3130645 /* Pods_ExamProject.framework */; };
 		C3BF8253231DC6FE8331E80B /* Pods_ExamProjectTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B99C7D9F322E2C5C841F334 /* Pods_ExamProjectTests.framework */; };
 /* End PBXBuildFile section */
@@ -67,6 +68,7 @@
 		594A90021EFFBBE100F1AB25 /* CustomDebugStringConvertible+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CustomDebugStringConvertible+Extensions.swift"; sourceTree = "<group>"; };
 		594A90041EFFBC7E00F1AB25 /* CustomStringConvertible+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CustomStringConvertible+Extensions.swift"; sourceTree = "<group>"; };
 		594A90061EFFF00D00F1AB25 /* UIView+Animations.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+Animations.swift"; sourceTree = "<group>"; };
+		594A90081F000A3700F1AB25 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		6B99C7D9F322E2C5C841F334 /* Pods_ExamProjectTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ExamProjectTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		740414275BECAB7122CF9C29 /* Pods-ExamProject.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ExamProject.release.xcconfig"; path = "Pods/Target Support Files/Pods-ExamProject/Pods-ExamProject.release.xcconfig"; sourceTree = "<group>"; };
 		D921CD7BDDBCA7D887472C2D /* Pods-ExamProjectTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ExamProjectTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-ExamProjectTests/Pods-ExamProjectTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -179,6 +181,7 @@
 			isa = PBXGroup;
 			children = (
 				591D81171EFDF544006836D5 /* Repository.swift */,
+				594A90081F000A3700F1AB25 /* User.swift */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -426,6 +429,7 @@
 				594A90071EFFF00D00F1AB25 /* UIView+Animations.swift in Sources */,
 				591AEB681EFAC63B0021D367 /* AppDelegate.swift in Sources */,
 				591D81181EFDF544006836D5 /* Repository.swift in Sources */,
+				594A90091F000A3700F1AB25 /* User.swift in Sources */,
 				594A8FFE1EFFB6A100F1AB25 /* RepoCollectionViewCell.swift in Sources */,
 				591D811D1EFE31D1006836D5 /* TimerView.swift in Sources */,
 				594A90011EFFB79500F1AB25 /* UIColor+Extensions.swift in Sources */,

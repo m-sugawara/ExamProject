@@ -10,6 +10,7 @@ import UIKit
 import RxSwift
 import RxCocoa
 import Moya
+import Kingfisher
 
 class TopViewController: UIViewController {
     
@@ -117,6 +118,8 @@ class TopViewController: UIViewController {
             cell.nameLabel.text = repo.name
             cell.descriptionLabel.text = repo.description
             cell.urlLabel.text = repo.htmlUrl
+            print("avatar: \(repo.owner.avatarUrl)")
+            cell.iconImageView.kf.setImage(with: URL(string: repo.owner.avatarUrl))
             
             return cell
         }
@@ -136,7 +139,7 @@ class TopViewController: UIViewController {
             let parent = collectionView.bounds.size
             let cellWidth = parent.width/3
             let cellHeight = (parent.height - 10 * (itemsInColumn + 1)) / itemsInColumn
-            print("cellWidth: \(cellWidth), cellHeight: \(cellHeight)")
+            
             return CGSize(width: cellWidth, height: cellHeight)
         }
     }
