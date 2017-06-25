@@ -19,7 +19,7 @@ class TopViewController: UIViewController {
     private let disposeBag = DisposeBag()
 
     @IBOutlet weak var clockView: ClockView!
-    @IBOutlet weak var button: UIButton!
+    @IBOutlet weak var refreshButton: UIButton!
     @IBOutlet weak var collectionView: UICollectionView!
     
     private var observer: Any?
@@ -42,13 +42,14 @@ class TopViewController: UIViewController {
     
     func bindToRx() {
         // ログ表示用
-        _ = viewModel.results.subscribe(onNext: { (repositories) in
+        _ = viewModel.results.subscribe(onNext: { [weak self] (repositories) in
             print("■■■■■💁<\(repositories.count) repositories found!!■■■■■")
             for repository in repositories {
                 print("■ \(repository.name)")
                 print("  - \(repository.url)")
             }
             print("■■■■■")
+            self?.refreshButton.stopSpinAnimation()
         }, onError: { (error) in
             print("error occurred.")
         }, onCompleted: { 
@@ -62,7 +63,10 @@ class TopViewController: UIViewController {
         collectionView.delegate = dataSource
         
         // 更新ボタン
-        button.rx.tap.bindTo(viewModel.buttonTaps).addDisposableTo(disposeBag)
+        refreshButton.rx.tap.bindTo(viewModel.buttonTaps).addDisposableTo(disposeBag)
+        _ = refreshButton.rx.tap.subscribe(onNext: { [weak self] _ in
+            self?.refreshButton.runSpinAnimation(withDuration: 1.0, doRepeat: true)
+        })
         
         // 一秒ごとにカウントするタイマーを取得して現在日時を表示
         observer = viewModel.simpleTimer.subscribe(onNext: { next in
@@ -85,7 +89,7 @@ class TopViewController: UIViewController {
     }
     
     // MARK: - UICollectionView Presenter
-    class DataSource: NSObject, RxCollectionViewDataSourceType, UICollectionViewDataSource, UICollectionViewDelegate {
+    class DataSource: NSObject, RxCollectionViewDataSourceType, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
         typealias Element = [Repository]
         
         var repositories: Element = []
@@ -118,6 +122,15 @@ class TopViewController: UIViewController {
         // MARK: - UICollectionViewDelegate
         func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
             print("\(indexPath.row) tapped.")
+        }
+        
+        // MARK: - UICollectionViewDelegateFlowLayout
+        func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+            let parent = collectionView.bounds.size
+            let cellWidth = parent.width/3
+            let cellHeight = (parent.height - 10 * 4) / 3
+            print("cellWidth: \(cellWidth), cellHeight: \(cellHeight)")
+            return CGSize(width: cellWidth, height: cellHeight)
         }
     }
 

@@ -14,8 +14,6 @@ class RepoCollectionViewCell: UICollectionViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
-        backgroundColor = UIColor.white.withAlphaComponent(0.3)
     }
 
 }
