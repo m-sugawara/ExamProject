@@ -7,6 +7,11 @@ PODS:
   - Moya/RxSwift (8.0.5):
     - Moya/Core
     - RxSwift (~> 3.0)
+  - Realm (2.8.2):
+    - Realm/Headers (= 2.8.2)
+  - Realm/Headers (2.8.2)
+  - RealmSwift (2.8.2):
+    - Realm (= 2.8.2)
   - Result (3.2.3)
   - RxCocoa (3.0.1):
     - RxSwift (~> 3.0)
@@ -18,6 +23,7 @@ PODS:
 DEPENDENCIES:
   - Kingfisher (~> 3.10.0)
   - Moya/RxSwift (~> 8.0.0)
+  - RealmSwift
   - RxCocoa (~> 3.0.0)
   - RxSwift (~> 3.0.0)
   - SnapKit (~> 3.0.0)
@@ -28,6 +34,8 @@ SPEC CHECKSUMS:
   Alamofire: f28cdffd29de33a7bfa022cbd63ae95a27fae140
   Kingfisher: 7297492bf8cec9b2e2dee3519f2219948580d98e
   Moya: c37eec09a098ba9991b5a963b291fc5704bdb9ef
+  Realm: 0e262abf087c7054013e00579274f7e070486d4a
+  RealmSwift: 73565e91bc403c1149e4acf31ff9de506b2f9459
   Result: 128640a6347e8d2ae48b142556739a2d13f90ce6
   RxCocoa: 15a52fc590dcc700cb4a690a633b5c5184ce3a78
   RxSwift: af5680055c4ad04480189c52d28385b1029493a6
@@ -35,6 +43,6 @@ SPEC CHECKSUMS:
   SwiftyJSON: c2842d878f95482ffceec5709abc3d05680c0220
   Timepiece: d07900e985af4911f09146f1175fdbec37944836
 
-PODFILE CHECKSUM: 47e63d873d047d1582061bd19e7f100e7bcf4fca
+PODFILE CHECKSUM: df7e483555cacd0468d6096f9771245c848ed074
 
 COCOAPODS: 1.2.1

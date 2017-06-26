@@ -72,7 +72,7 @@ class TopViewController: UIViewController {
         // 一秒ごとにカウントするタイマーを取得して現在日時を表示
         observer = viewModel.simpleTimer.subscribe(onNext: { next in
             let now = Date()
-            self.clockView.timeLabel.text = now.toString(format: "HH:mm:ss")
+            self.clockView.timeLabel.text = now.toString(format: "yyyy/MM/dd HH:mm:ss")
         }).addDisposableTo(disposeBag)
         
         print("\(self) viewModel binded.")
@@ -135,11 +135,28 @@ class TopViewController: UIViewController {
         
         // MARK: - UICollectionViewDelegateFlowLayout
         func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-            let itemsInColumn: CGFloat = 2
             let parent = collectionView.bounds.size
-            let cellWidth = parent.width/3
-            let cellHeight = (parent.height - 10 * (itemsInColumn + 1)) / itemsInColumn
+            let minHeight: CGFloat = 140
             
+            let itemsInColumn: CGFloat = CGFloat(Int(parent.height / minHeight))
+            
+            var cellWidth: CGFloat!
+            var cellHeight: CGFloat!
+            if itemsInColumn >= 3 {
+                // ３個以上のときは一番下のセルだけ二倍の高さにする
+                cellWidth = parent.width/3
+                cellHeight = floor((parent.height - 10 * itemsInColumn) / itemsInColumn)
+                if indexPath.row%Int(itemsInColumn-1) == 0 {
+                    
+                } else {
+                    cellHeight = cellHeight * 2.0
+                }
+                print("cellHeight: \(cellHeight), parent: \(parent.height)")
+                return CGSize(width: cellWidth, height: cellHeight)
+            } else {
+                cellWidth = parent.width/3
+                cellHeight = (parent.height - 10 * (itemsInColumn + 1)) / itemsInColumn
+            }
             return CGSize(width: cellWidth, height: cellHeight)
         }
     }
