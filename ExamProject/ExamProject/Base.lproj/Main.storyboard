@@ -36,15 +36,14 @@
                                         <blurEffect style="light"/>
                                     </visualEffectView>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="znS-cP-Byb" customClass="ClockView" customModule="ExamProject" customModuleProvider="target">
-                                        <rect key="frame" x="67" y="64" width="240" height="80"/>
+                                        <rect key="frame" x="16" y="20" width="343" height="80"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="80" id="5RA-EP-znH"/>
-                                            <constraint firstAttribute="width" constant="240" id="aFQ-D1-dnM"/>
                                         </constraints>
                                     </view>
                                     <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="eM6-RM-VSK">
-                                        <rect key="frame" x="16" y="184" width="343" height="467"/>
+                                        <rect key="frame" x="16" y="116" width="343" height="535"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.40000000000000002" colorSpace="calibratedWhite"/>
                                         <inset key="scrollIndicatorInsets" minX="10" minY="10" maxX="10" maxY="10"/>
                                         <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="lSd-u4-b1v">
@@ -82,11 +81,13 @@
                                     </button>
                                 </subviews>
                                 <constraints>
+                                    <constraint firstItem="eM6-RM-VSK" firstAttribute="leading" secondItem="znS-cP-Byb" secondAttribute="leading" id="3Aq-PQ-cmf"/>
+                                    <constraint firstItem="eM6-RM-VSK" firstAttribute="trailing" secondItem="znS-cP-Byb" secondAttribute="trailing" id="4cU-PE-OfY"/>
                                     <constraint firstItem="eM6-RM-VSK" firstAttribute="leading" secondItem="XEW-SE-Vcv" secondAttribute="leading" constant="16" id="8eh-lZ-1Th"/>
                                     <constraint firstAttribute="trailing" secondItem="eM6-RM-VSK" secondAttribute="trailing" constant="16" id="A8x-4x-xgh"/>
                                     <constraint firstItem="o5i-J8-Ei3" firstAttribute="leading" secondItem="XEW-SE-Vcv" secondAttribute="leading" id="EN3-M7-Cx5"/>
                                     <constraint firstAttribute="trailing" secondItem="o5i-J8-Ei3" secondAttribute="trailing" id="G4h-sv-NbY"/>
-                                    <constraint firstItem="znS-cP-Byb" firstAttribute="top" secondItem="XEW-SE-Vcv" secondAttribute="top" constant="64" id="IH7-RF-HE5"/>
+                                    <constraint firstItem="znS-cP-Byb" firstAttribute="top" secondItem="XEW-SE-Vcv" secondAttribute="top" constant="20" id="IH7-RF-HE5"/>
                                     <constraint firstAttribute="bottom" secondItem="eb6-P5-M5h" secondAttribute="bottom" constant="32" id="Llj-K1-eyo"/>
                                     <constraint firstAttribute="bottom" secondItem="eM6-RM-VSK" secondAttribute="bottom" constant="16" id="UA5-8v-NYG"/>
                                     <constraint firstItem="J5R-Gq-RRA" firstAttribute="bottom" secondItem="o5i-J8-Ei3" secondAttribute="bottom" id="VCG-iF-0tf"/>
@@ -96,7 +97,7 @@
                                     <constraint firstItem="znS-cP-Byb" firstAttribute="centerX" secondItem="XEW-SE-Vcv" secondAttribute="centerX" id="gxL-UT-75l"/>
                                     <constraint firstAttribute="bottom" secondItem="o5i-J8-Ei3" secondAttribute="bottom" id="hMV-Bm-B2g"/>
                                     <constraint firstItem="o5i-J8-Ei3" firstAttribute="top" secondItem="XEW-SE-Vcv" secondAttribute="top" id="jue-Kc-eSF"/>
-                                    <constraint firstItem="eM6-RM-VSK" firstAttribute="top" secondItem="znS-cP-Byb" secondAttribute="bottom" constant="40" id="qcf-zv-AFP"/>
+                                    <constraint firstItem="eM6-RM-VSK" firstAttribute="top" secondItem="znS-cP-Byb" secondAttribute="bottom" constant="16" id="qcf-zv-AFP"/>
                                     <constraint firstItem="eb6-P5-M5h" firstAttribute="centerX" secondItem="XEW-SE-Vcv" secondAttribute="centerX" id="xdZ-yp-9PE"/>
                                 </constraints>
                             </view>

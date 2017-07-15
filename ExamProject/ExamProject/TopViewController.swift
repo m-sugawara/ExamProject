@@ -72,7 +72,7 @@ class TopViewController: UIViewController {
         // 一秒ごとにカウントするタイマーを取得して現在日時を表示
         observer = viewModel.simpleTimer.subscribe(onNext: { next in
             let now = Date()
-            self.clockView.timeLabel.text = now.toString(format: "HH:mm:ss")
+            self.clockView.timeLabel.text = now.toString(format: "yyyy/MM/dd HH:mm:ss")
         }).addDisposableTo(disposeBag)
         
         print("\(self) viewModel binded.")
@@ -135,8 +135,11 @@ class TopViewController: UIViewController {
         
         // MARK: - UICollectionViewDelegateFlowLayout
         func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-            let itemsInColumn: CGFloat = 2
             let parent = collectionView.bounds.size
+            let minHeight: CGFloat = 200
+            
+            let itemsInColumn: CGFloat = CGFloat(Int(parent.height / minHeight))
+            
             let cellWidth = parent.width/3
             let cellHeight = (parent.height - 10 * (itemsInColumn + 1)) / itemsInColumn
             
